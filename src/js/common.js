@@ -8,13 +8,10 @@ export function initPendo(apiKey, visitor, account) {
   if (manifestVersion == 3) {
     let urlRedirects = {
       // In App Designer
-      "https://app.pendo.io/in-app-designer/latest/plugin.js":
-        "chrome-extension://nfkpadjooccoapnbfmflkjadegfegdog/agent/plugin.js",
-      "https://app.pendo.io/in-app-designer/latest/preloader.js":
-        "chrome-extension://nfkpadjooccoapnbfmflkjadegfegdog/agent/preloader.js",
+      "https://app.pendo.io/in-app-designer/latest/plugin.js": `chrome-extension://${chrome.runtime.id}/agent/plugin.js`,
+      "https://app.pendo.io/in-app-designer/latest/preloader.js": `chrome-extension://${chrome.runtime.id}/agent/preloader.js`,
       // Preview Mode
-      "https://cdn.pendo.io/agent/releases/2.143.1/pendo.preview.min.js":
-        "chrome-extension://nfkpadjooccoapnbfmflkjadegfegdog/agent/pendo.preview.min.js",
+      "https://cdn.pendo.io/agent/releases/2.143.1/pendo.preview.min.js": `chrome-extension://${chrome.runtime.id}/agent/pendo.preview.min.js`,
     };
 
     // Overwrite appendChild method
