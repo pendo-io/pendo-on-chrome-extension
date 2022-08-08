@@ -1,6 +1,5 @@
 /build
 /node_modules
-/public/guide-code-blocks/*.js
 /public/agent/pendo.debugger.min.js
 /public/agent/pendo-unminified.js
 /src/js/common-with-debugger-and-custom-code.js
