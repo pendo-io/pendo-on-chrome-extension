@@ -1,0 +1,22 @@
+{
+  "name": "<NAME>",
+  "manifest_version": "<MANIFEST_VERSION>",
+  "version": "<VERSION_NUMBER>",
+  "description": "Example of how Pendo is installed in chrome extension.",
+  "permissions": ["storage"],
+  "background": {
+    "service_worker": "js/background.js"
+  },
+  "options_page": "html/options.html",
+  "<ACTION_API>": {
+    "default_popup": "html/popup.html"
+  },
+  "<CONTENT_SECURITY_POLICY>": {},
+  "content_scripts": [
+    {
+      "matches": ["*://*/*"],
+      "js": ["js/content-script.js"]
+    }
+  ],
+  "<WEB_ACCESIBLE_RESOURCES>": {}
+}
